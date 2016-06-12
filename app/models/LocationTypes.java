@@ -1,7 +1,7 @@
 package models;
 
 
-import play.db.ebean.Model;
+import com.avaje.ebean.Model;
 
 import javax.persistence.*;
 
@@ -23,5 +23,5 @@ public class LocationTypes extends Model {
     @Column(name="description")
     public String description;
 
-
+    public static Finder<Integer, LocationTypes> find = new Finder<Integer,LocationTypes>(LocationTypes.class);
 }

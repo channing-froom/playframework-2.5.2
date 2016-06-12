@@ -1,7 +1,7 @@
 package models;
 
 
-import play.db.ebean.Model;
+import com.avaje.ebean.Model;
 
 import javax.persistence.*;
 
@@ -26,4 +26,5 @@ public class Users extends Model {
     @Column(name="email", unique = true)
     public String email;
 
+    public static Finder<Integer, Users> find = new Finder<Integer,Users>(Users.class);
 }

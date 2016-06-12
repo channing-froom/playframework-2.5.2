@@ -1,35 +1,21 @@
 package models;
 
 
-import play.db.ebean.Model;
-
+import java.util.*;
 import javax.persistence.*;
 
+import com.avaje.ebean.Model;
+import play.data.format.*;
+import play.data.validation.*;
+
 @Entity
-@Table(name="locations")
 public class Locations extends Model{
 
     @Id
-    @GeneratedValue( strategy= GenerationType.AUTO )
-    @Column(name="id")
     public Integer id;
 
-    @Column(name="name", nullable = false)
     public String name;
 
-    @Column(name="address")
-    public String address;
-
-    @Column(name="description")
-    public String description;
-
-    @Column(name="latitude", nullable = false)
-    public Integer latitude;
-
-    @Column(name="longitude", nullable = false)
-    public Integer longitude;
-
-    @Column(name="location_type_id", nullable = false)
-    public Integer location_type_id;
+    public static Finder<Integer, Locations> find = new Finder<Integer,Locations>(Locations.class);
 
 }

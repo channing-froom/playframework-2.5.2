@@ -1,3 +1,11 @@
+# Application run
+Running application : bin/activator run or activator run
+
+# Todo
+Models are loosely created for this example. Production version will require correctly defined Entities
+Move API controllers onto the play API layer eg play.api.mvc
+
+
 This is your new Play application
 =================================
 
@@ -49,6 +57,3 @@ Filters
   A simple filter that adds a header to every response.
 
 
-#Own
-
-Running application : bin/activator run or activator run

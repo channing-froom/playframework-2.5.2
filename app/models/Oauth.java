@@ -1,6 +1,6 @@
 package models;
 
-import play.db.ebean.Model;
+import com.avaje.ebean.Model;
 
 import javax.persistence.*;
 
@@ -24,5 +24,7 @@ public class Oauth extends Model {
 
     @Column(name="active")
     public Integer active;
+
+    public static Finder<Integer, Oauth> find = new Finder<Integer,Oauth>(Oauth.class);
 
 }
