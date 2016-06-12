@@ -1,6 +1,11 @@
 # Application run
 Running application : bin/activator run or activator run
 
+find postman scripts in root/Play-api.postman_collection.json
+
+Generate new locations using the scripts provided in laravel-5.2-api
+Requires Oauth token
+
 # Todo
 Models are loosely created for this example. Production version will require correctly defined Entities
 Models require relationships for future use.
