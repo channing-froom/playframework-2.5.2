@@ -6,6 +6,8 @@ import javax.persistence.*;
 import com.avaje.ebean.Model;
 import play.data.validation.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "locations")
 public class Locations extends Model{
@@ -36,4 +38,11 @@ public class Locations extends Model{
 
     public static Finder<Integer, Locations> find = new Finder<Integer,Locations>(Locations.class);
 
+    public static List<Locations> findByName(String name)
+    {
+        return find
+                .where()
+                .like("name", name)
+                .findList();
+    }
 }

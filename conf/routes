@@ -15,3 +15,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # API routes
 GET     /api/v1/locations           controllers.LocationsRestfulController.getIndex
+GET     /api/v1/locations/:id       controllers.LocationsRestfulController.getLocationById(id: Integer)
+GET     /api/v1/locations/find/:name     controllers.LocationsRestfulController.getLocationbyName(name: String)
