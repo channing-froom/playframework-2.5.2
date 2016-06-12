@@ -26,5 +26,5 @@ public class Users extends Model {
     @Column(name="email", unique = true)
     public String email;
 
-    public static Finder<Integer, Users> find = new Finder<Integer,Users>(Users.class);
+    public static Finder<Integer, Locations> find = new Finder<Integer,Locations>(Locations.class);
 }

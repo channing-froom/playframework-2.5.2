@@ -15,7 +15,11 @@ create table location_types (
 
 create table locations (
   id                            integer auto_increment not null,
-  name                          varchar(255),
+  name                          varchar(150) not null,
+  address                       varchar(350) not null,
+  description                   varchar(255),
+  latitude                      varchar(255) not null,
+  longitude                     varchar(255) not null,
   constraint pk_locations primary key (id)
 );
 
