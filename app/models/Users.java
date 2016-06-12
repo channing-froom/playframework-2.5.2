@@ -23,8 +23,8 @@ public class Users extends Model {
     @Column(name="last_name", nullable = false)
     public String last_name;
 
-    @Column(name="email", unique = true)
+    @Column(name="email", unique = true, nullable = false)
     public String email;
 
-    public static Finder<Integer, Locations> find = new Finder<Integer,Locations>(Locations.class);
+    public static Finder<Integer, Users> find = new Finder<Integer,Users>(Users.class);
 }
